@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tixonic Electronics — Smart LED TVs · Connect With World</title>
-  <meta name="description" content="Tixonic Electronics — Android & Google TV Smart LED TVs from 24 to 65 inches, HD to 4K QLED. Connect with world." />
+  <meta name="description" content="Tixonic Electronics — Android & Google TV Smart LED TVs from 24 to 65 inches, HD to 4K QLED, engineered in Delhi. Connect with world." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="logo-tixonic.png" />
 </head>
@@ -17,24 +17,24 @@
   <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Loader -->
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <div class="loader-pixels"><i></i><i></i><i></i><i></i></div>
-      <div class="loader-word">TIXONIC</div>
-    </div>
+  <!-- Ambient broadcast timecode -->
+  <div class="timecode" id="timecode" aria-hidden="true"><span class="rec"></span>REC <b id="tc">00:00:00:00</b></div>
+
+  <!-- Power-on boot -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-bars"></div>
+    <div class="boot-line"></div>
+    <div class="boot-tag">TIXONIC — SIGNAL LOCK</div>
   </div>
 
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#home" class="brand" data-magnetic>
-        <img src="logo-tixonic.png" alt="Tixonic Electronics" class="brand-logo" />
-      </a>
+      <a href="#home" class="brand" data-magnetic><img src="logo-tixonic.png" alt="Tixonic Electronics" class="brand-logo" /></a>
       <nav class="nav-links" id="navLinks">
         <a href="#range">Range</a>
         <a href="#catalogue">Catalogue</a>
-        <a href="#features">Technology</a>
+        <a href="#tech">Technology</a>
         <a href="#about">About</a>
         <a href="#contact" class="nav-cta" data-magnetic>Enquire</a>
       </nav>
@@ -44,82 +44,82 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-grid-lines" aria-hidden="true"></div>
-    <div class="hero-corner tl">EST. DELHI</div>
-    <div class="hero-corner tr">24" — 65"</div>
-    <div class="hero-corner bl">HD · FHD · 4K QLED</div>
+    <div class="hero-scanline" aria-hidden="true"></div>
     <div class="container hero-inner">
       <div class="hero-copy">
-        <span class="eyebrow"><i class="px"></i> Connect With World</span>
+        <span class="on-air"><span class="rec"></span>ON AIR · DELHI</span>
         <h1 class="hero-title">
-          <span class="l"><span class="w">The screen</span></span>
-          <span class="l"><span class="w">is the <em>stage.</em></span></span>
+          <span class="l"><span class="w">THE SCREEN</span></span>
+          <span class="l"><span class="w">IS THE STAGE</span></span>
         </h1>
-        <p class="lead">Android &amp; Google TV Smart LED televisions engineered in Delhi — from a compact 24" HD panel to a 65" 4K QLED home theatre. Cinematic picture, honest price.</p>
+        <p class="lead">Android &amp; Google TV smart LED televisions, engineered in Delhi — from a compact 24&Prime; HD panel to a 65&Prime; 4K QLED home theatre. Cinematic picture, honest price.</p>
         <div class="hero-actions">
           <a href="#range" class="btn btn-primary" data-magnetic>Explore the range</a>
           <a href="#catalogue" class="btn btn-ghost" data-magnetic>View catalogue</a>
         </div>
-        <div class="hero-mini">
-          <div><b>13</b><span>Models</span></div>
-          <div><b>4K</b><span>QLED · HDR10</span></div>
-          <div><b>Google TV</b><span>&amp; WebOS</span></div>
-        </div>
+        <dl class="hero-readout">
+          <div><dt>Models</dt><dd>13</dd></div>
+          <div><dt>Resolution</dt><dd>up to 4K</dd></div>
+          <div><dt>Platform</dt><dd>Google TV · WebOS</dd></div>
+        </dl>
       </div>
 
       <div class="hero-visual">
-        <div class="tvframe" id="heroTv">
-          <div class="tvpanel">
+        <div class="tvset" id="heroTv">
+          <div class="screen">
             <div class="channels" id="channels">
-              <div class="ch active" data-name="CINEMA"   style="--c1:#3a0d09;--c2:#ee5b1e"></div>
-              <div class="ch"        data-name="SPORTS"   style="--c1:#052a12;--c2:#12b552"></div>
-              <div class="ch"        data-name="4K NATURE" style="--c1:#04222b;--c2:#16b0d6"></div>
-              <div class="ch"        data-name="MUSIC"    style="--c1:#26062b;--c2:#b12ad6"></div>
-              <div class="ch"        data-name="NEWS"     style="--c1:#071634;--c2:#2f6dff"></div>
+              <div class="ch active" data-ch="CINEMA"    data-now="Midnight Express" style="--c1:#3a0d09;--c2:#ee5b1e"></div>
+              <div class="ch"        data-ch="SPORTS"    data-now="Live · Match Centre" style="--c1:#052a12;--c2:#12b552"></div>
+              <div class="ch"        data-ch="NATURE 4K" data-now="Planet, in 4K" style="--c1:#04222b;--c2:#16b0d6"></div>
+              <div class="ch"        data-ch="MUSIC"     data-now="Top 40 · Now" style="--c1:#26062b;--c2:#b12ad6"></div>
+              <div class="ch"        data-ch="NEWS 24×7" data-now="Tixonic News" style="--c1:#071634;--c2:#2f6dff"></div>
             </div>
-            <div class="ch-osd"><span class="live"></span> LIVE</div>
-            <div class="ch-badge"><span id="chNum">01</span><span id="chName">CINEMA</span></div>
+            <div class="osd">
+              <div class="osd-ch"><b id="osdNum">01</b><span id="osdName">CINEMA</span></div>
+              <div class="osd-now"><span class="live-dot"></span><span id="osdNow">Now Playing — Midnight Express</span></div>
+              <div class="osd-bar"><i id="osdProg"></i></div>
+            </div>
+            <div class="glitch" id="glitch" aria-hidden="true"></div>
             <div class="scanlines" aria-hidden="true"></div>
             <div class="glare" aria-hidden="true"></div>
           </div>
           <div class="tv-neck"></div>
           <div class="tv-foot"></div>
-          <div class="tv-cast">TIXONIC · UHD</div>
         </div>
       </div>
     </div>
-    <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><i></i></div>
+    <div class="scroll-hint" aria-hidden="true"><span>SCROLL</span><i></i></div>
   </section>
 
-  <!-- SPECTRUM MARQUEE -->
-  <div class="ribbon" aria-hidden="true">
-    <div class="ribbon-spectrum"></div>
-    <div class="ribbon-track">
-      <span>QLED 4K</span><i></i><span>Google TV</span><i></i><span>WebOS · ThinQ AI</span><i></i><span>Dolby Atmos</span><i></i><span>Bezel-less</span><i></i><span>HDR 10</span><i></i><span>Chromecast built-in</span><i></i>
-      <span>QLED 4K</span><i></i><span>Google TV</span><i></i><span>WebOS · ThinQ AI</span><i></i><span>Dolby Atmos</span><i></i><span>Bezel-less</span><i></i><span>HDR 10</span><i></i><span>Chromecast built-in</span><i></i>
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-bars"></div>
+    <div class="ticker-track">
+      <span>QLED 4K</span><em>·</em><span>Google TV</span><em>·</em><span>WebOS · ThinQ AI</span><em>·</em><span>Dolby Atmos</span><em>·</em><span>Bezel-less</span><em>·</em><span>HDR 10</span><em>·</em><span>Chromecast built-in</span><em>·</em>
+      <span>QLED 4K</span><em>·</em><span>Google TV</span><em>·</em><span>WebOS · ThinQ AI</span><em>·</em><span>Dolby Atmos</span><em>·</em><span>Bezel-less</span><em>·</em><span>HDR 10</span><em>·</em><span>Chromecast built-in</span><em>·</em>
     </div>
   </div>
 
-  <!-- PINNED RANGE -->
+  <!-- RANGE (pinned) -->
   <section class="range" id="range">
     <div class="range-sticky">
       <div class="range-bg" id="rangeBg" aria-hidden="true"></div>
       <div class="container range-inner">
         <div class="range-head">
-          <span class="index">(01 — The Range)</span>
-          <h2>From bedroom<br>to home theatre.</h2>
-          <p>Keep scrolling — the screen grows with you, 24" to 65".</p>
+          <span class="ch-label">CH 01 · The Range</span>
+          <h2>Bedroom to<br>home theatre.</h2>
+          <p>Scroll to flip up the range — the screen grows with you, 24&Prime; to 65&Prime;.</p>
         </div>
         <div class="range-stage">
           <div class="stage-tv" id="stageTv">
-            <div class="stage-screen"><div class="stage-size" id="stageSize">24"</div></div>
+            <div class="stage-screen"><span class="stage-size" id="stageSize">24&Prime;</span></div>
             <div class="stage-base"></div>
           </div>
         </div>
         <div class="range-info">
-          <div class="ri-num"><span id="riIndex">01</span><em id="riTotal">/ 06</em></div>
-          <h3 id="riName">Tixonic 24" HD</h3>
-          <p id="riDesc">Perfect for bedrooms &amp; kitchens — sharp HD picture in a compact frame.</p>
+          <div class="ri-meta"><span id="riIndex">01</span> <em id="riTotal">/ 06</em></div>
+          <h3 id="riName">Tixonic 24&Prime; HD</h3>
+          <p id="riDesc">Perfect for bedrooms &amp; kitchens — sharp HD in a compact frame.</p>
           <ul id="riSpecs"><li>HD 1366×768</li><li>20W Audio</li><li>Bezel-less</li></ul>
         </div>
         <div class="range-dots" id="rangeDots"></div>
@@ -131,42 +131,41 @@
   <section class="section" id="catalogue">
     <div class="container">
       <div class="section-head">
-        <span class="index">(02 — Catalogue)</span>
-        <h2>The <em>full</em> line-up.</h2>
+        <span class="ch-label">CH 02 · Catalogue</span>
+        <h2>The full line-up</h2>
         <p>Thirteen models across four smart platforms. Filter by size.</p>
       </div>
       <div class="cat-filters" id="catFilters">
         <button class="chip active" data-f="all">All</button>
-        <button class="chip" data-f="24">24"</button>
-        <button class="chip" data-f="32">32"</button>
-        <button class="chip" data-f="43">43"</button>
-        <button class="chip" data-f="50">50"</button>
-        <button class="chip" data-f="55">55"</button>
-        <button class="chip" data-f="65">65"</button>
+        <button class="chip" data-f="24">24&Prime;</button>
+        <button class="chip" data-f="32">32&Prime;</button>
+        <button class="chip" data-f="43">43&Prime;</button>
+        <button class="chip" data-f="50">50&Prime;</button>
+        <button class="chip" data-f="55">55&Prime;</button>
+        <button class="chip" data-f="65">65&Prime;</button>
       </div>
       <div class="cat-grid" id="catGrid"></div>
     </div>
   </section>
 
   <!-- TECHNOLOGY -->
-  <section class="section section-alt" id="features">
+  <section class="section section-alt" id="tech">
     <div class="container">
       <div class="section-head">
-        <span class="index">(03 — Technology)</span>
-        <h2>Premium panels.<br><em>Honest</em> price.</h2>
+        <span class="ch-label">CH 03 · Technology</span>
+        <h2>Premium panels.<br>Honest price.</h2>
       </div>
       <div class="bento">
         <article class="tilt cell big" data-tilt>
-          <div class="cell-tag">01</div>
           <div class="cell-ico">◈</div>
           <h3>QLED 4K &amp; HDR10</h3>
-          <p>Quantum-dot QLED panels up to 3840×2160 with HDR10 — over 8 million pixels of lifelike, cinematic colour.</p>
+          <p>Quantum-dot panels up to 3840×2160 with HDR10 — over eight million pixels of lifelike, cinematic colour.</p>
           <div class="cell-shine"></div>
         </article>
-        <article class="tilt cell" data-tilt><div class="cell-tag">02</div><div class="cell-ico">▶</div><h3>Google TV &amp; WebOS</h3><p>Netflix, Prime, JioHotstar, ZEE5 &amp; the Play Store — built in.</p><div class="cell-shine"></div></article>
-        <article class="tilt cell" data-tilt><div class="cell-tag">03</div><div class="cell-ico">♪</div><h3>Dolby Atmos Audio</h3><p>Room-filling, object-based sound with crystal-clear dialogue.</p><div class="cell-shine"></div></article>
-        <article class="tilt cell" data-tilt><div class="cell-tag">04</div><div class="cell-ico">◻</div><h3>Bezel-less Design</h3><p>An almost frameless panel — all focus on your content.</p><div class="cell-shine"></div></article>
-        <article class="tilt cell wide" data-tilt><div class="cell-tag">05</div><div class="cell-ico">⚡</div><h3>ThinQ AI · Magic Remote · Chromecast built-in</h3><p>Voice control, dual-band WiFi and screen-mirroring across the smart range — everything connected, out of the box.</p><div class="cell-shine"></div></article>
+        <article class="tilt cell" data-tilt><div class="cell-ico">▶</div><h3>Google TV &amp; WebOS</h3><p>Netflix, Prime, JioHotstar, ZEE5 &amp; the Play Store — built in.</p><div class="cell-shine"></div></article>
+        <article class="tilt cell" data-tilt><div class="cell-ico">♪</div><h3>Dolby Atmos</h3><p>Room-filling, object-based sound with clear dialogue.</p><div class="cell-shine"></div></article>
+        <article class="tilt cell" data-tilt><div class="cell-ico">▭</div><h3>Bezel-less</h3><p>An almost frameless panel — all focus on your content.</p><div class="cell-shine"></div></article>
+        <article class="tilt cell wide" data-tilt><div class="cell-ico">⏻</div><h3>ThinQ AI · Magic Remote · Chromecast built-in</h3><p>Voice control, dual-band WiFi and screen-mirroring across the smart range — everything connected, out of the box.</p><div class="cell-shine"></div></article>
       </div>
     </div>
   </section>
@@ -175,7 +174,7 @@
   <section class="stats-band">
     <div class="container stats-inner">
       <div class="stat"><strong data-count="13" data-suffix="">0</strong><span>Models in the range</span></div>
-      <div class="stat"><strong data-count="65" data-suffix='"'>0</strong><span>Inches, flagship</span></div>
+      <div class="stat"><strong data-count="65" data-suffix="&Prime;">0</strong><span>Inches, flagship</span></div>
       <div class="stat"><strong data-count="4" data-suffix="K">0</strong><span>QLED · HDR10</span></div>
       <div class="stat"><strong data-count="100" data-suffix="%">0</strong><span>Made for India</span></div>
     </div>
@@ -185,18 +184,14 @@
   <section class="section section-dark" id="about">
     <div class="container about-inner">
       <div class="about-copy">
-        <span class="index">(04 — About)</span>
-        <h2>Quality electronics for <em>every</em> family.</h2>
-        <p>Tixonic Electronics is a Delhi-based brand built on one idea — put premium-feeling television within reach of every Indian home. From a first HD TV to a 65" 4K QLED, we obsess over picture, sound and value.</p>
-        <blockquote>“Connect with world.”</blockquote>
+        <span class="ch-label">CH 04 · About</span>
+        <h2>Quality electronics for every family.</h2>
+        <p>Tixonic Electronics is a Delhi-based brand built on one idea — put premium-feeling television within reach of every Indian home. From a first HD TV to a 65&Prime; 4K QLED, we obsess over picture, sound and value.</p>
+        <blockquote>Connect with world.</blockquote>
         <p class="addr">B-25, Aditya Commercial Complex, DDA Market, Nangal Raya,<br>opp. Janakpuri D-Block, South West Delhi, New Delhi</p>
         <a href="#contact" class="btn btn-primary" data-magnetic>Become a dealer</a>
       </div>
-      <div class="about-art" aria-hidden="true">
-        <div class="px-cluster">
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-      </div>
+      <div class="about-art" aria-hidden="true"><div class="testcard"><div class="tc-bars"></div><div class="tc-strip"></div><div class="tc-logo">TIXONIC</div></div></div>
     </div>
   </section>
 
@@ -204,8 +199,8 @@
   <section class="section" id="contact">
     <div class="container">
       <div class="section-head">
-        <span class="index">(05 — Enquire)</span>
-        <h2>Let's talk <em>Tixonic.</em></h2>
+        <span class="ch-label">CH 05 · Enquire</span>
+        <h2>Let's talk Tixonic</h2>
         <p>Buying, becoming a dealer, or need support? Drop us a line.</p>
       </div>
       <div class="contact-grid">
@@ -246,7 +241,7 @@
         <p>Connect with world. Smart LED TVs engineered in Delhi, made for India.</p>
       </div>
       <div class="footer-cols">
-        <div><h4>Products</h4><a href="#range">Smart TVs</a><a href="#catalogue">Full catalogue</a><a href="#features">Technology</a></div>
+        <div><h4>Products</h4><a href="#range">Smart TVs</a><a href="#catalogue">Full catalogue</a><a href="#tech">Technology</a></div>
         <div><h4>Company</h4><a href="#about">About</a><a href="#contact">Dealers</a><a href="#contact">Contact</a></div>
         <div><h4>Support</h4><a href="#contact">Warranty</a><a href="#contact">Service</a><a href="#contact">Help</a></div>
       </div>
