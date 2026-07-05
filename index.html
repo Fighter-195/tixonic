@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tixonic Electronics — Smart LED TVs & Home Electronics</title>
+  <meta name="description" content="Tixonic Electronics — Android Smart LED TVs from 24 to 65 inches, plus LED lighting and home electronics. Bringing the cinema home." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="logo.svg" />
+</head>
+<body>
+
+  <!-- Grain + cursor + progress -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-word"><span>T</span><span>I</span><span>X</span><span>O</span><span>N</span><span>I</span><span>C</span></div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" data-magnetic>
+        <img src="logo.svg" class="brand-mark" alt="Tixonic logo" width="40" height="40" />
+        <span class="brand-name">TIXONIC<span class="brand-sub">CONNECT WITH WORLD</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#range">Smart TVs</a>
+        <a href="#features">Features</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta" data-magnetic>Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="mesh" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow reveal-up">● Android Smart LED TVs — Made for India</span>
+        <h1 class="hero-title">
+          <span class="line"><span class="w">Bringing</span> <span class="w">the</span></span>
+          <span class="line"><span class="w grad">cinema</span></span>
+          <span class="line"><span class="w">home.</span></span>
+        </h1>
+        <p class="lead reveal-up">Crystal-clear Android Smart LED TVs from 24" to 55" UHD, built with premium panels and honest pricing — plus the everyday electronics families trust.</p>
+        <div class="hero-actions reveal-up">
+          <a href="#range" class="btn btn-primary" data-magnetic>Explore the range</a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic>Become a dealer</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal-up">
+        <div class="tv3d" id="heroTv">
+          <div class="tv-screen">
+            <div class="tv-ui">
+              <span class="dot"></span>
+              <div class="tv-logo">TIXONIC</div>
+              <div class="tv-tiles"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="scan"></div>
+          </div>
+          <div class="tv-stand"></div>
+          <div class="tv-glow"></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><i></i></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>4K Ultra HD</span><i>✦</i><span>Android Smart OS</span><i>✦</i><span>Dolby-tuned Audio</span><i>✦</i><span>Bezel-less Design</span><i>✦</i><span>1-Year Warranty</span><i>✦</i>
+      <span>4K Ultra HD</span><i>✦</i><span>Android Smart OS</span><i>✦</i><span>Dolby-tuned Audio</span><i>✦</i><span>Bezel-less Design</span><i>✦</i><span>1-Year Warranty</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- PINNED SCROLLYTELLING: THE RANGE -->
+  <section class="range" id="range">
+    <div class="range-sticky">
+      <div class="range-bg" aria-hidden="true"></div>
+      <div class="container range-inner">
+        <div class="range-head">
+          <span class="kicker">The Range</span>
+          <h2>A screen for every room.</h2>
+          <p>Keep scrolling — from a cozy 24" to a 55" UHD home-theatre flagship.</p>
+        </div>
+
+        <div class="range-stage">
+          <div class="stage-tv" id="stageTv">
+            <div class="stage-screen">
+              <div class="stage-size" id="stageSize">24"</div>
+            </div>
+            <div class="stage-base"></div>
+          </div>
+        </div>
+
+        <div class="range-info">
+          <div class="ri-num"><span id="riIndex">01</span><em>/ 05</em></div>
+          <h3 id="riName">Tixonic HD Ready</h3>
+          <p id="riDesc">Perfect for bedrooms & kitchens — sharp HD picture in a compact frame.</p>
+          <ul id="riSpecs">
+            <li>1366×768 HD</li><li>Dual HDMI + USB</li><li>20W Speakers</li>
+          </ul>
+        </div>
+
+        <div class="range-dots" id="rangeDots">
+          <span class="on"></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES (bento) -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker reveal-up">Why Tixonic</span>
+        <h2 class="reveal-up">Premium features. <span class="grad">Honest</span> price.</h2>
+        <p class="reveal-up">Flagship-feel experiences engineered without the flagship price tag.</p>
+      </div>
+      <div class="bento">
+        <article class="tilt cell big" data-tilt>
+          <div class="cell-ico">📺</div>
+          <h3>4K Ultra HD Clarity</h3>
+          <p>Over 8 million pixels of lifelike detail with rich, accurate colour and HDR10 support.</p>
+          <div class="cell-shine"></div>
+        </article>
+        <article class="tilt cell" data-tilt>
+          <div class="cell-ico">🤖</div>
+          <h3>Android Smart OS</h3>
+          <p>Netflix, YouTube, Prime & the Play Store built in.</p>
+          <div class="cell-shine"></div>
+        </article>
+        <article class="tilt cell" data-tilt>
+          <div class="cell-ico">🔊</div>
+          <h3>Dolby-tuned Audio</h3>
+          <p>Room-filling sound with crystal-clear dialogue.</p>
+          <div class="cell-shine"></div>
+        </article>
+        <article class="tilt cell" data-tilt>
+          <div class="cell-ico">🖼️</div>
+          <h3>Bezel-less Design</h3>
+          <p>An almost frameless panel — all focus on your content.</p>
+          <div class="cell-shine"></div>
+        </article>
+        <article class="tilt cell wide" data-tilt>
+          <div class="cell-ico">⚡</div>
+          <h3>Quad-core Power + 1-Year Warranty</h3>
+          <p>A snappy processor with 2GB RAM keeps everything fluid, backed by responsive after-sales service.</p>
+          <div class="cell-shine"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS (horizontal scroll) -->
+  <section class="section section-alt" id="products">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker reveal-up">Beyond the Screen</span>
+        <h2 class="reveal-up">Electronics for the whole home.</h2>
+        <p class="reveal-up">Drag or scroll sideways →</p>
+      </div>
+    </div>
+    <div class="hscroll" id="hscroll">
+      <div class="hscroll-track">
+        <article class="pcard"><div class="pcard-ico">💡</div><h3>LED Lighting</h3><p>Energy-efficient bulbs, tube-lights and panels that last longer and shine brighter.</p></article>
+        <article class="pcard"><div class="pcard-ico">🔌</div><h3>Switches & Fittings</h3><p>Durable modular switches and electrical fittings built to safety standards.</p></article>
+        <article class="pcard"><div class="pcard-ico">🧺</div><h3>Home Appliances</h3><p>Everyday essentials like iron boxes and small appliances that just work.</p></article>
+        <article class="pcard"><div class="pcard-ico">🔧</div><h3>Accessories</h3><p>Wall mounts, remotes and cables — everything to complete your setup.</p></article>
+        <article class="pcard"><div class="pcard-ico">📱</div><h3>Mobile Electronics</h3><p>PCBAs and components engineered for reliability and value.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS (count up) -->
+  <section class="stats-band">
+    <div class="container stats-inner">
+      <div class="stat"><strong data-count="6" data-suffix="+">0</strong><span>Screen sizes</span></div>
+      <div class="stat"><strong data-count="55" data-suffix='"'>0</strong><span>Inches, flagship UHD</span></div>
+      <div class="stat"><strong data-count="1000" data-suffix="s">0</strong><span>Homes served</span></div>
+      <div class="stat"><strong data-count="100" data-suffix="%">0</strong><span>Made for India</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-dark" id="about">
+    <div class="container about-inner">
+      <div class="about-copy">
+        <span class="kicker reveal-up">Our Story</span>
+        <h2 class="reveal-up">Quality electronics, priced for <span class="grad">every family</span>.</h2>
+        <p class="reveal-up">Tixonic Electronics is a Delhi-based brand on a simple mission: put premium-feeling technology within reach of every Indian household — from our Android Smart LED TVs to our home lighting.</p>
+        <p class="reveal-up">We work directly with manufacturers and dealers to keep prices honest and after-sales support close by — because a great product is only half the promise.</p>
+        <a href="#contact" class="btn btn-primary reveal-up" data-magnetic>Partner with us</a>
+      </div>
+      <div class="about-art reveal-up" aria-hidden="true">
+        <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+        <div class="about-badge">T</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker reveal-up">Get in Touch</span>
+        <h2 class="reveal-up">Let's talk <span class="grad">Tixonic</span>.</h2>
+        <p class="reveal-up">Looking to buy, become a dealer, or need support? Drop us a line.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <div class="ci"><span class="ci-ico">📍</span><div><strong>Head Office</strong><p>B-25, Aditya Commercial Complex, DDA Market, Nangal Raya, opp. Janakpuri D-Block, South West Delhi, New Delhi</p></div></div>
+          <div class="ci"><span class="ci-ico">✉️</span><div><strong>Email</strong><p>tixonicelectronics@gmail.com</p></div></div>
+          <div class="ci"><span class="ci-ico">📞</span><div><strong>Sales & Support</strong><p>+91 00000 00000</p></div></div>
+          <div class="ci"><span class="ci-ico">🕑</span><div><strong>Hours</strong><p>Mon–Sat, 10am – 7pm</p></div></div>
+        </div>
+        <form class="contact-form reveal-up" onsubmit="return handleSubmit(event)">
+          <div class="row">
+            <label>Name<input type="text" name="name" required placeholder="Your name" /></label>
+            <label>Phone<input type="tel" name="phone" placeholder="+91 …" /></label>
+          </div>
+          <label>Email<input type="email" name="email" required placeholder="you@example.com" /></label>
+          <label>I'm interested in
+            <select name="interest">
+              <option>Buying a Tixonic TV</option>
+              <option>Becoming a dealer / distributor</option>
+              <option>Home electronics</option>
+              <option>After-sales support</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="4" placeholder="How can we help?"></textarea></label>
+          <button type="submit" class="btn btn-primary" data-magnetic>Send message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-big" aria-hidden="true">TIXONIC</div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="brand"><img src="logo.svg" class="brand-mark" alt="Tixonic logo" width="40" height="40" /><span class="brand-name">TIXONIC<span class="brand-sub">CONNECT WITH WORLD</span></span></a>
+        <p>Connect with world. Smart LED TVs & home electronics, made for India.</p>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Products</h4><a href="#range">Smart TVs</a><a href="#products">LED Lighting</a><a href="#products">Switches</a><a href="#products">Appliances</a></div>
+        <div><h4>Company</h4><a href="#about">About</a><a href="#features">Features</a><a href="#contact">Contact</a><a href="#contact">Dealers</a></div>
+        <div><h4>Support</h4><a href="#contact">Warranty</a><a href="#contact">Service</a><a href="#contact">Help</a></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Tixonic Electronics. All rights reserved.</span>
+      <span>Bringing the cinema home.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
