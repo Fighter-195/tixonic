@@ -11,11 +11,10 @@
   --muted:#868c96;
   --line:rgba(255,255,255,.08);
   --signal:#ff7a1a;         /* Tixonic orange — the "on-air" accent */
+  --amber:#ffbf47;          /* second tone */
   --signal-soft:rgba(255,122,26,.14);
-  /* SMPTE colour bars — the signature spectrum */
-  --bars:linear-gradient(90deg,
-     #d7d7d2 0 14.28%, #e8cf2a 14.28% 28.57%, #33c2d4 28.57% 42.85%,
-     #33ad4a 42.85% 57.14%, #c8479a 57.14% 71.42%, #d94038 71.42% 85.71%, #3767cf 85.71% 100%);
+  /* dual-tone signature — orange → amber */
+  --bars:linear-gradient(90deg,var(--signal),var(--amber));
   --radius:14px;
   --shadow:0 40px 100px -46px rgba(0,0,0,.9);
   --max:1200px;
@@ -228,7 +227,7 @@ a{color:inherit;text-decoration:none}
 .about-art{display:grid;place-items:center}
 .testcard{width:100%;max-width:360px;aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow)}
 .tc-bars{height:72%;background:var(--bars)}
-.tc-strip{height:28%;background:linear-gradient(90deg,#0b1a3a 0 62%,#111 62% 100%)}
+.tc-strip{height:28%;background:linear-gradient(90deg,#1b1b1f 0 62%,#0d0d0f 62% 100%)}
 .testcard::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 2px,rgba(0,0,0,.28) 2px 3px);opacity:.35;pointer-events:none}
 .tc-logo{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-family:'Archivo Black',sans-serif;font-size:1.1rem;letter-spacing:.2em;color:#fff;background:rgba(0,0,0,.55);padding:.3rem .7rem;border-radius:5px}
 
