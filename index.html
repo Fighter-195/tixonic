@@ -13,12 +13,21 @@
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
-  <div class="cursor" id="cursor" aria-hidden="true"></div>
   <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Ambient broadcast timecode -->
-  <div class="timecode" id="timecode" aria-hidden="true"><span class="rec"></span>REC <b id="tc">00:00:00:00</b></div>
+  <!-- Mini TV — live "recording" feed -->
+  <div class="minitv" id="minitv" aria-hidden="true">
+    <div class="minitv-set">
+      <div class="minitv-screen">
+        <span class="vf tl"></span><span class="vf tr"></span><span class="vf bl"></span><span class="vf br"></span>
+        <span class="mt-rec"><i></i>REC</span>
+        <span class="mt-tc" id="tc">00:00:00:00</span>
+        <span class="mt-scan"></span>
+      </div>
+      <div class="minitv-foot"></div>
+    </div>
+  </div>
 
   <!-- Power-on boot -->
   <div class="boot" id="boot" aria-hidden="true">

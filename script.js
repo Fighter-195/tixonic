@@ -47,12 +47,10 @@ let frame = 0, t0 = performance.now();
   requestAnimationFrame(tick);
 })(t0);
 
-/* --- custom cursor --- */
-const cursor = document.getElementById('cursor'), dot = document.getElementById('cursorDot');
-let mx = innerWidth/2, my = innerHeight/2, cx = mx, cy = my;
-addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`; });
-(function loop(){ cx+=(mx-cx)*.18; cy+=(my-cy)*.18; cursor.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`; requestAnimationFrame(loop); })();
-function bindHover(sel){ document.querySelectorAll(sel).forEach(el=>{ el.addEventListener('mouseenter',()=>cursor.classList.add('grow')); el.addEventListener('mouseleave',()=>cursor.classList.remove('grow')); }); }
+/* --- cursor dot --- */
+const dot = document.getElementById('cursorDot');
+addEventListener('mousemove', e => { dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`; });
+function bindHover(){}  /* pointer ring removed — dot only */
 
 /* --- scroll progress + nav --- */
 const nav=document.getElementById('nav'), progress=document.getElementById('scrollProgress'); let lastY=0;
